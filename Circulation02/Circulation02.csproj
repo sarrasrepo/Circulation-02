@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89DC9B14-6F76-496E-B94D-39F92BAD2896}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Circulation02</RootNamespace>
+    <AssemblyName>Circulation02</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALOCIRDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALOCIRDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ALOCIRDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALOCIRDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ALOCIRDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALOCIRDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ALOCIRDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ALOCIRDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data Model\dataProvider.cs" />
+    <Compile Include="Data Model\dbConnection.cs" />
+    <Compile Include="Forms\frmEmpHierarchy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmpHierarchy.Designer.cs">
+      <DependentUpon>frmEmpHierarchy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderAgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderAgnt.Designer.cs">
+      <DependentUpon>frmFinderAgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAgentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAgentInfo.Designer.cs">
+      <DependentUpon>frmAgentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCategorySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCategorySetup.Designer.cs">
+      <DependentUpon>frmCategorySetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChallanMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChallanMod.Designer.cs">
+      <DependentUpon>frmChallanMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompetitorName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompetitorName.Designer.cs">
+      <DependentUpon>frmCompetitorName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompetitorSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompetitorSales.Designer.cs">
+      <DependentUpon>frmCompetitorSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCopyOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCopyOrd.Designer.cs">
+      <DependentUpon>frmCopyOrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCrpOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCrpOrd.Designer.cs">
+      <DependentUpon>frmCrpOrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCTPSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCTPSetup.Designer.cs">
+      <DependentUpon>frmCTPSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderAgnt2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderAgnt2.Designer.cs">
+      <DependentUpon>frmFinderAgnt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderPO.Designer.cs">
+      <DependentUpon>frmFinderPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderPS.Designer.cs">
+      <DependentUpon>frmFinderPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderStation.Designer.cs">
+      <DependentUpon>frmFinderStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinderUnion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinderUnion.Designer.cs">
+      <DependentUpon>frmFinderUnion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGrpAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGrpAuth.Designer.cs">
+      <DependentUpon>frmGrpAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModifyOrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModifyOrd.Designer.cs">
+      <DependentUpon>frmModifyOrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMonthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMonthly.Designer.cs">
+      <DependentUpon>frmMonthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrdEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrdEntry.Designer.cs">
+      <DependentUpon>frmOrdEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrdSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrdSync.Designer.cs">
+      <DependentUpon>frmOrdSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPageSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPageSetup.Designer.cs">
+      <DependentUpon>frmPageSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPopulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPopulation.Designer.cs">
+      <DependentUpon>frmPopulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuarterly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuarterly.Designer.cs">
+      <DependentUpon>frmQuarterly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRateChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRateChange.Designer.cs">
+      <DependentUpon>frmRateChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRateSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRateSetup.Designer.cs">
+      <DependentUpon>frmRateSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegion.Designer.cs">
+      <DependentUpon>frmRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegularMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegularMod.Designer.cs">
+      <DependentUpon>frmRegularMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmROU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmROU.Designer.cs">
+      <DependentUpon>frmROU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRoute.Designer.cs">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRtnEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRtnEntry.Designer.cs">
+      <DependentUpon>frmRtnEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalesArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalesArea.Designer.cs">
+      <DependentUpon>frmSalesArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubRoute.Designer.cs">
+      <DependentUpon>frmSubRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransportMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransportMaintenance.Designer.cs">
+      <DependentUpon>frmTransportMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserAuth.Designer.cs">
+      <DependentUpon>frmUserAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserFinder.Designer.cs">
+      <DependentUpon>frmUserFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.Designer.cs">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVehicleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVehicleInfo.Designer.cs">
+      <DependentUpon>frmVehicleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmYearly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmYearly.Designer.cs">
+      <DependentUpon>frmYearly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinderOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinderOrder.Designer.cs">
+      <DependentUpon>frmFinderOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmEmpHierarchy.resx">
+      <DependentUpon>frmEmpHierarchy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderAgnt.resx">
+      <DependentUpon>frmFinderAgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAgentInfo.resx">
+      <DependentUpon>frmAgentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCategorySetup.resx">
+      <DependentUpon>frmCategorySetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChallanMod.resx">
+      <DependentUpon>frmChallanMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompetitorName.resx">
+      <DependentUpon>frmCompetitorName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompetitorSales.resx">
+      <DependentUpon>frmCompetitorSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCopyOrd.resx">
+      <DependentUpon>frmCopyOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCrpOrd.resx">
+      <DependentUpon>frmCrpOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCTPSetup.resx">
+      <DependentUpon>frmCTPSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderAgnt2.resx">
+      <DependentUpon>frmFinderAgnt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderPO.resx">
+      <DependentUpon>frmFinderPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderPS.resx">
+      <DependentUpon>frmFinderPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderStation.resx">
+      <DependentUpon>frmFinderStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinderUnion.resx">
+      <DependentUpon>frmFinderUnion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGrpAuth.resx">
+      <DependentUpon>frmGrpAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModifyOrd.resx">
+      <DependentUpon>frmModifyOrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMonthly.resx">
+      <DependentUpon>frmMonthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOrdEntry.resx">
+      <DependentUpon>frmOrdEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOrdSync.resx">
+      <DependentUpon>frmOrdSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPageSetup.resx">
+      <DependentUpon>frmPageSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPopulation.resx">
+      <DependentUpon>frmPopulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQuarterly.resx">
+      <DependentUpon>frmQuarterly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRateChange.resx">
+      <DependentUpon>frmRateChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRateSetup.resx">
+      <DependentUpon>frmRateSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegion.resx">
+      <DependentUpon>frmRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegularMod.resx">
+      <DependentUpon>frmRegularMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmROU.resx">
+      <DependentUpon>frmROU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRoute.resx">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRtnEntry.resx">
+      <DependentUpon>frmRtnEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalesArea.resx">
+      <DependentUpon>frmSalesArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubRoute.resx">
+      <DependentUpon>frmSubRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransportMaintenance.resx">
+      <DependentUpon>frmTransportMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserAuth.resx">
+      <DependentUpon>frmUserAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserFinder.resx">
+      <DependentUpon>frmUserFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGroup.resx">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVehicleInfo.resx">
+      <DependentUpon>frmVehicleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmYearly.resx">
+      <DependentUpon>frmYearly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinderOrder.resx">
+      <DependentUpon>frmFinderOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ALOCIRDataSet1.xsc">
+      <DependentUpon>ALOCIRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALOCIRDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALOCIRDataSet1.xss">
+      <DependentUpon>ALOCIRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet2.xsc">
+      <DependentUpon>ALOCIRDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALOCIRDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALOCIRDataSet2.xss">
+      <DependentUpon>ALOCIRDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet4.xsc">
+      <DependentUpon>ALOCIRDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALOCIRDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALOCIRDataSet4.xss">
+      <DependentUpon>ALOCIRDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet5.xsc">
+      <DependentUpon>ALOCIRDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ALOCIRDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ALOCIRDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ALOCIRDataSet5.xss">
+      <DependentUpon>ALOCIRDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data Model\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\finder.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
