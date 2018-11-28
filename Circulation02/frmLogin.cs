@@ -95,7 +95,7 @@ namespace Circulation02
             if (!userFound)
             {
                 
-            MessageBox.Show("You Have Entered Wrong Username Or Password!!!");
+            MessageBox.Show("You Have Entered Wrong Username Or Password !");
                 txtUserID.Focus();
                 return;
 
